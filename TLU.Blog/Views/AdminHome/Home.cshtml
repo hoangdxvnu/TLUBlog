@@ -2,7 +2,8 @@
 @{
     ViewBag.Title = "Home";
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    ViewBag.Account = TLU.Blog.Helpers.BlogCookies.GetCookie("AccountAdmin");
 }
 
 <h2>Home</h2>
-
+<p>@ViewBag.Account</p>

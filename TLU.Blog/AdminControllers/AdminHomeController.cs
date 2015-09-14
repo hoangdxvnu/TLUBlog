@@ -13,5 +13,11 @@ namespace TLU.Blog.AdminControllers
         {
             return View();
         }
+        public ActionResult LogOut()
+        {
+            const string ACCOUNT_ADMIN = "AccountAdmin";
+            HttpContext.Session.Remove(ACCOUNT_ADMIN);
+            return RedirectToAction("LogIn", "AdminLogIn");
+        }
     }
 }

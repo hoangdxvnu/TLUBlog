@@ -20,7 +20,7 @@ namespace TLU.Blog.AdminControllers
             const string ACCOUNT_ADMIN = "AccountAdmin";
             if (UserName=="admin"&&Password=="123")
             {
-                Helpers.BlogCookies.AddCookie("Nguyen Van Kinh", ACCOUNT_ADMIN);
+                HttpContext.Session[ACCOUNT_ADMIN] = "VanKinh";
                 return RedirectToAction("Home", "AdminHome");
             }
             return View();

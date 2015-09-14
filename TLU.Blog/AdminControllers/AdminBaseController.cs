@@ -12,7 +12,7 @@ namespace TLU.Blog.AdminControllers
         // GET: AdminBase
         protected override void OnActionExecuting(ActionExecutingContext filterContext)
         {
-            if(string.IsNullOrEmpty(BlogCookies.GetCookie(ACCOUNT_ADMIN)))
+            if(HttpContext.Session[ACCOUNT_ADMIN]==null)
             {
                 filterContext.Result = new RedirectToRouteResult(new System.Web.Routing.RouteValueDictionary((new { controller = "AdminLogIn", action = "logIn" })));
             }

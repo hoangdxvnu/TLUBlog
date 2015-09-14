@@ -32,6 +32,10 @@ namespace TLU.Blog.Helpers
             return string.Empty;
         }
 
-
+        public static void RemoveCookie(string pKey)
+        {
+            HttpContext.Current.Response.Cookies.Remove(pKey);
+            HttpContext.Current.Request.Cookies.Remove(pKey);
+        }
     }
 }

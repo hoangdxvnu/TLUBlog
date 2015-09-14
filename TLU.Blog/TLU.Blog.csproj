@@ -157,6 +157,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminControllers\AdminAboutController.cs" />
     <Compile Include="AdminControllers\AdminBaseController.cs" />
     <Compile Include="AdminControllers\AdminHomeController.cs" />
     <Compile Include="AdminControllers\AdminLogInController.cs" />
@@ -1363,6 +1364,7 @@
     <Content Include="Views\Shared\dropdown-menu.cshtml" />
     <Content Include="Views\Shared\_LayoutAdmin.cshtml" />
     <Content Include="Views\AdminHome\Home.cshtml" />
+    <Content Include="Views\AdminAbout\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
