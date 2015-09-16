@@ -16,7 +16,14 @@ namespace TLU.Blog
             routes.MapRoute(
                 name: "Admin",
                 url: "Admin",
-                defaults: new { controller = "AdminHome", action = "Home"}
+                defaults: new { controller = "AdminHome", action = "Index"}
+            );
+
+            
+            routes.MapRoute(
+                name: "LogIn",
+                url: "LogIn",
+                defaults: new { controller = "AdminLogIn", action = "LogIn" }
             );
 
             routes.MapRoute(
@@ -24,13 +31,6 @@ namespace TLU.Blog
                 url: "{action}",
                 defaults: new { controller = "Home", action = "Index" }
             );
-            
-            routes.MapRoute(
-                name: "LogIn",
-                url: "LogIn",
-                defaults: new { controller = "AdminLogIn", action = "LogIn" }
-            );
-            
 
             routes.MapRoute(
                 name: "Default",
