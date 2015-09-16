@@ -61,6 +61,15 @@ namespace TLU.Blog.Resource {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Giới Thiệu.
+        /// </summary>
+        internal static string About {
+            get {
+                return ResourceManager.GetString("About", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Liên hệ.
         /// </summary>
         internal static string Contact {
@@ -79,11 +88,38 @@ namespace TLU.Blog.Resource {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Đăng Nhập.
+        /// </summary>
+        internal static string Log_In {
+            get {
+                return ResourceManager.GetString("Log In", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to THÊM THÔNG TIN.
+        /// </summary>
+        internal static string MORE_INFO {
+            get {
+                return ResourceManager.GetString("MORE INFO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Tin tức.
         /// </summary>
         internal static string New {
             get {
                 return ResourceManager.GetString("New", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tạo Câu Hỏi.
+        /// </summary>
+        internal static string New_Post {
+            get {
+                return ResourceManager.GetString("New Post", resourceCulture);
             }
         }
         
@@ -102,6 +138,51 @@ namespace TLU.Blog.Resource {
         internal static string SEAGroup {
             get {
                 return ResourceManager.GetString("SEAGroup", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Gửi Tin Nhắn.
+        /// </summary>
+        internal static string Send_Message {
+            get {
+                return ResourceManager.GetString("Send Message", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Chứng Thực.
+        /// </summary>
+        internal static string Testimonials {
+            get {
+                return ResourceManager.GetString("Testimonials", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Chủ Đề.
+        /// </summary>
+        internal static string Topic {
+            get {
+                return ResourceManager.GetString("Topic", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Chúng Tôi Đang Cập Nhật.
+        /// </summary>
+        internal static string We_are_UpDating {
+            get {
+                return ResourceManager.GetString("We are UpDating", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Chào Mừng.
+        /// </summary>
+        internal static string Welcome {
+            get {
+                return ResourceManager.GetString("Welcome", resourceCulture);
             }
         }
     }
