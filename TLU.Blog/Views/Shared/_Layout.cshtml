@@ -44,9 +44,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <ul class="navig">
                     @foreach (var item in (ViewBag.Navigation as List<Navigation>))
                     {
-                        if (item.Link == string.Format("{0}/{1}", ViewContext.RouteData.Values["controller"].ToString(), ViewContext.RouteData.Values["action"].ToString()))
-                        { 
-                            <li class="active"><a href="#">@item.Name</a></li>
+                        //if (item.Link == string.Format("{0}/{1}", ViewContext.RouteData.Values["controller"].ToString(), ViewContext.RouteData.Values["action"].ToString()))
+                        if(ViewBag.Title==item.Link)
+                        {
+                            <li class="active"><a href="@item.Link">@item.Name</a></li>
                         }
                         else
                         {
@@ -96,9 +97,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         </div>
         <div class="banner-grids">
             <div class="container">
+                @*Phần bài post mới*@
                 <div class="col-md-4 banner-grid">
                     <h3>@TLUResourceManager.GetValueByKey("Post")</h3>
-                    <div class="banner-grid-sec">
+                    <div class="banner-grid-sec" style="height: 240px;">
+                        @*
+                            ViewBag.ListPost
+                            Phần nầy có ảnh đại diện, tên người đăng và miêu tả thôi nhé. cái này là trong csld mới, nhớ thêm vào
+                            *@
                         <div class="grid_info">
                             <div class="blg-pic">
                                 <img src="~/Content/images/m1.jpg" class="img-responsive" alt="">
@@ -109,7 +115,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             </div>
                             <div class="clearfix"></div>
                         </div>
-                        <div class="grid_info">
+                        @*<div class="grid_info">
                             <div class="blg-pic">
                                 <img src="~/Content/images/m2.jpg" class="img-responsive" alt="">
                             </div>
@@ -118,16 +124,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <p>Aliquam sem velit, rhoncus sed arcu at curabitur et erat eu viverra.</p>
                             </div>
                             <div class="clearfix"></div>
-                        </div>
+                        </div>*@
                         <div class="more">
-                            <a href="blog.html">See more from the Blog ></a>
+                            <a href="Awnser">See more from the Blog ></a>
                         </div>
                     </div>
                 </div>
+               
+                @*Phần Bài Mới Phần *@
                 <div class="col-md-4 banner-grid">
                     <h3>@TLUResourceManager.GetValueByKey("New")</h3>
-                    <div class="banner-grid-sec">
+                    <div class="banner-grid-sec" style="height: 240px;">
                         <div class="news-grid">
+                            <h4>@TLUResourceManager.GetValueByKey("We are UpDating")</h4>
+                        </div>
+                        @*<div class="news-grid">
                             <h4><a href="#">Vivamus tempus ligula</a></h4>
                             <p>Aliquam sem velit, rhoncus sed arcu eu viverra.</p>
                         </div>
@@ -142,12 +153,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <div class="news-grid">
                             <h4><a href="#">Vivamus tempus ligula</a></h4>
                             <p>Aliquam sem velit, rhoncus sed arcu eu viverra.</p>
-                        </div>
+                        </div>*@
                     </div>
                 </div>
+
+                @*Phần Contact*@
                 <div class="col-md-4 banner-grid">
                     <h3>@TLUResourceManager.GetValueByKey("Contact")</h3>
-                    <div class="banner-grid-sec news_sec">
+                    <div class="banner-grid-sec news_sec" style="height: 240px;">
                         <div class="news-ltr">
                             <h4><a href="#">Pellentesque sed arcu lacinia</a></h4>
                             <p>Aliquam sem velit, rhoncus sed arcu eu viverra. Suspendisse lacus posuere ultricies turpis.</p>
@@ -169,18 +182,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div class="welcm_sec">
                 <div class="col-md-9 campus">
                     <div class="campus_head">
-                        <h3>Welcome</h3>
+                        <h3>@TLUResourceManager.GetValueByKey("Welcome")</h3>
                         <p>
                             Nunc justo sapien, cursus at urna at, placerat porttitor tellus. Aliquam vehicula tellus nunc,
                             id pretium lacus placerat dignissim. Donec quis dui sed lacus vulputate scelerisque a sit amet neque.
                         </p>
                     </div>
+                    @* Đay là phần bài post Hot
+                        Phần này gồm ảnh tên người đăng và miêu tả 
+                        *@
                     <div class="col-md-3 wel_grid">
                         <img src="~/Content/images/w1.jpg" class="img-responsive" alt="" />
                         <h5><a href="#">Aliquam sit amet</a></h5>
                         <p>Morbi molestie nec ante ultrices. Cum sociis natoque penatibus et magnis dis parturient</p>
                     </div>
-                    <div class="col-md-3 wel_grid">
+                    @*<div class="col-md-3 wel_grid">
                         <img src="~/Content/images/w3.jpg" class="img-responsive" alt="" />
                         <h5><a href="#">Aliquam sit amet</a></h5>
                         <p>Morbi molestie nec ante ultrices. Cum sociis natoque penatibus et magnis dis parturient</p>
@@ -194,14 +210,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <img src="~/Content/images/w4.jpg" class="img-responsive" alt="" />
                         <h5><a href="#">Aliquam sit amet</a></h5>
                         <p>Morbi molestie nec ante ultrices. Cum sociis natoque penatibus et magnis dis parturient</p>
-                    </div>
+                    </div>*@
                     <div class="clearfix"></div>
                     <div class="more_info">
-                        <a href="blog.html">More Info....</a>
+                        <a href="Awnser">@TLUResourceManager.GetValueByKey("MORE INFO")....</a>
                     </div>
                 </div>
                 <div class="col-md-3 testimonal">
-                    <h3>Testimonials</h3>
+                    <h3>@TLUResourceManager.GetValueByKey("Testimonials")</h3>
                     <div class="testimnl-grid">
                         <a href="#"><p>Aenean ultrices commodo risus, id sollicitudin nunc commodo at. Sed sagittis, lacus id viverra eleifend, enim magna.</p></a>
                         <h5>John.Mr</h5>

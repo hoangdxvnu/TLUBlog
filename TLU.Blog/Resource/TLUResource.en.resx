@@ -117,19 +117,46 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="About" xml:space="preserve">
+    <value>About</value>
+  </data>
   <data name="Contact" xml:space="preserve">
     <value>Contact</value>
   </data>
   <data name="CopyRight" xml:space="preserve">
     <value>Copyright</value>
   </data>
+  <data name="Log In" xml:space="preserve">
+    <value>Log In</value>
+  </data>
+  <data name="MORE INFO" xml:space="preserve">
+    <value>MORE INFO</value>
+  </data>
   <data name="New" xml:space="preserve">
     <value>News</value>
+  </data>
+  <data name="New Post" xml:space="preserve">
+    <value>New Post</value>
   </data>
   <data name="Post" xml:space="preserve">
     <value>Posts</value>
   </data>
   <data name="SEAGroup" xml:space="preserve">
     <value>Software Engineering and Algorithm</value>
+  </data>
+  <data name="Send Message" xml:space="preserve">
+    <value>Send Message</value>
+  </data>
+  <data name="Testimonials" xml:space="preserve">
+    <value>Testimonials</value>
+  </data>
+  <data name="Topic" xml:space="preserve">
+    <value>Topic</value>
+  </data>
+  <data name="We are UpDating" xml:space="preserve">
+    <value>We are UpDating</value>
+  </data>
+  <data name="Welcome" xml:space="preserve">
+    <value>Welcome</value>
   </data>
 </root>

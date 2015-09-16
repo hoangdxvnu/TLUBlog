@@ -21,9 +21,23 @@ namespace TLU.Blog.Controllers
             return View();
         }
 
+        public ActionResult New()
+        {
+            ViewBag.Message = "Your application description page.";
+
+            return View();
+        }
+
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "Your application description page.";
+
+            return View();
+        }
+
+        public ActionResult Awnser()
+        {
+            ViewBag.Message = "Your application description page.";
 
             return View();
         }
@@ -37,6 +51,29 @@ namespace TLU.Blog.Controllers
 
             return RedirectToAction("Index");
 
+        }
+        public ActionResult NewPost()
+        {
+            return View();
+        }
+
+        public ActionResult Post()
+        {
+
+            return View();
+        }
+
+        public ActionResult ViewLike()
+        {
+            ViewBag.Votes = true;
+            ViewBag.Like = 15;
+            return View();
+        }
+
+        public ActionResult ViewComment(string pContent, int pId)
+        {
+
+            return View();
         }
     }
 }

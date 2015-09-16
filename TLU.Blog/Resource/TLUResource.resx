@@ -117,19 +117,46 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="About" xml:space="preserve">
+    <value>Giới Thiệu</value>
+  </data>
   <data name="Contact" xml:space="preserve">
     <value>Liên hệ</value>
   </data>
   <data name="CopyRight" xml:space="preserve">
     <value>Bản quyền</value>
   </data>
+  <data name="Log In" xml:space="preserve">
+    <value>Đăng Nhập</value>
+  </data>
+  <data name="MORE INFO" xml:space="preserve">
+    <value>THÊM THÔNG TIN</value>
+  </data>
   <data name="New" xml:space="preserve">
     <value>Tin tức</value>
+  </data>
+  <data name="New Post" xml:space="preserve">
+    <value>Tạo Câu Hỏi</value>
   </data>
   <data name="Post" xml:space="preserve">
     <value>Bài mới</value>
   </data>
   <data name="SEAGroup" xml:space="preserve">
     <value>Nhóm kỹ nghệ phần mềm và thuật toán</value>
+  </data>
+  <data name="Send Message" xml:space="preserve">
+    <value>Gửi Tin Nhắn</value>
+  </data>
+  <data name="Testimonials" xml:space="preserve">
+    <value>Chứng Thực</value>
+  </data>
+  <data name="Topic" xml:space="preserve">
+    <value>Chủ Đề</value>
+  </data>
+  <data name="We are UpDating" xml:space="preserve">
+    <value>Chúng Tôi Đang Cập Nhật</value>
+  </data>
+  <data name="Welcome" xml:space="preserve">
+    <value>Chào Mừng</value>
   </data>
 </root>

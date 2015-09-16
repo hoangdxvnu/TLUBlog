@@ -30,6 +30,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -167,11 +168,13 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LogInController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helpers\BlogCookies.cs" />
     <Compile Include="Helpers\BlogLang.cs" />
+    <Compile Include="Helpers\Test.cs" />
     <Compile Include="Helpers\TLUCultureEnum.cs" />
     <Compile Include="Helpers\TLUResourceManager.cs" />
     <Compile Include="Libraries\Helpers.cs" />
@@ -1161,6 +1164,7 @@
     <Content Include="Content\images\awr.png" />
     <Content Include="Content\images\banner.jpg" />
     <Content Include="Content\images\cm.png" />
+    <Content Include="Content\images\dislike.PNG" />
     <Content Include="Content\images\English.png" />
     <Content Include="Content\images\fancybox_sprite.png" />
     <Content Include="Content\images\icon1.png" />
@@ -1170,6 +1174,7 @@
     <Content Include="Content\images\img14.jpg" />
     <Content Include="Content\images\img16.jpg" />
     <Content Include="Content\images\img17.jpg" />
+    <Content Include="Content\images\like.PNG" />
     <Content Include="Content\images\logo.jpg" />
     <Content Include="Content\images\m1.jpg" />
     <Content Include="Content\images\m2.jpg" />
@@ -1192,6 +1197,7 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Scripts\angular.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Content\fonts\OpenSans-Regular.ttf" />
@@ -1325,6 +1331,7 @@
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.11.3.min %281%29.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
@@ -1368,6 +1375,13 @@
     <Content Include="Views\Shared\_Profile1.cshtml" />
     <Content Include="Views\Shared\_Profile2.cshtml" />
     <Content Include="Views\AdminAbout\Create.cshtml" />
+    <Content Include="Views\Home\New.cshtml" />
+    <Content Include="Views\Home\Awnser.cshtml" />
+    <Content Include="Views\Shared\_Layout2.cshtml" />
+    <Content Include="Views\LogIn\LogIn.cshtml" />
+    <Content Include="Views\Home\NewPost.cshtml" />
+    <Content Include="Views\Home\Post.cshtml" />
+    <Content Include="Views\Home\ViewLike.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -1394,7 +1408,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TLU.Blog.Data\TLU.Blog.Data.csproj">
-      <Project>{c1358be5-0a45-4565-afc1-409bae7da4cc}</Project>
+      <Project>{bade6ac5-f2bd-4ee1-96c7-feb0947d5d75}</Project>
       <Name>TLU.Blog.Data</Name>
     </ProjectReference>
   </ItemGroup>

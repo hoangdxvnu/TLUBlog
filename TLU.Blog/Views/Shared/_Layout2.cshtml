@@ -1,0 +1,129 @@
+﻿@using TLU.Blog.Data;
+@using TLU.Blog.Helpers;
+<!--A Design by W3layouts
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>University a Educational Category Flat Bootstarp Responsive Website Template | Home :: w3layouts</title>
+    <link href="~/Content/bootstrap.css" rel='stylesheet' type='text/css' />
+    <!-- jQuery (necessary JavaScript plugins) -->
+    <script src="~/Content/js/bootstrap.js"></script>
+    <!-- Custom Theme files -->
+    <link href="~/Content/style.css" rel='stylesheet' type='text/css' />
+    <!-- Custom Theme files -->
+    <!--//theme-style-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="University Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <script src="~/Content/js/jquery.min.js"></script>
+    <script src="~/Content/js/bootstrap.js"></script>
+
+</head>
+<body>
+    <!-- banner -->
+    <div class="banner2">
+        <div class="header">
+            <div class="logo">
+                <a href="index.html"><img src="~/Content/images/logo.jpg" alt="" /></a>
+            </div>
+            <div class="top-menu">
+                <span class="menu"></span>
+                <ul class="navig">
+                    @foreach (var item in (ViewBag.Navigation as List<Navigation>))
+                    {
+                        //if (item.Link == string.Format("{0}/{1}", ViewContext.RouteData.Values["controller"].ToString(), ViewContext.RouteData.Values["action"].ToString()))
+                        if (ViewBag.Title == item.Link)
+                        {
+                            <li class="active"><a href="@item.Link">@item.Name</a></li>
+                        }
+                        else
+                        {
+                            <li><a href="@item.Link">@item.Name</a></li>
+                        }
+                    }
+                    @*<li><a href="about.html">Giới thiệu</a></li>
+                    <li><a href="program.html">Tin tức</a></li>
+                    <li><a href="blog.html">Hỏi đáp</a></li>
+                    <li><a href="gallery.html">Ảnh</a></li>
+                    <li><a href="contact.html">Liên hệ</a></li>*@
+                    @if (BlogLang.CurrentLang == (int)TLUCultureEnumType.vi)
+                    {
+                        <li><a href="@Url.Content("~/Home/ChangeLanguage/en")" title="English"><img src="@Url.Content("~/Content/images/English.png")" /></a></li>
+                    }
+                    else
+                    {
+                        <li><a href="@Url.Content("~/Home/ChangeLanguage/vi")" title="English"><img src="@Url.Content("~/Content/images/Vietname.png")" /></a></li>
+                    }
+                </ul>
+            </div>
+            <!-- script-for-menu -->
+            <script>
+                $("span.menu").click(function () {
+                    $("ul.navig").slideToggle("slow", function () {
+                    });
+                });
+            </script>
+            <!-- script-for-menu -->
+
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <!---->
+    <div class="about-sec">
+        <div class="container">
+            @RenderBody()
+        </div>
+    </div>
+
+    <!---->
+    <div class="footer">
+        @*<div class="container">
+                <div class="ftr-sec">
+                    <div class="col-md-4 ftr-grid">
+                        <h3>Text Module</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut odio ut quam convallis ultricies. Morbi rutrum lectus tortor. Cras vitae semper mi, et feugiat dolor.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut odio ut quam convallis ultricies. Morbi rutrum lectus tortor. Cras vitae semper mi, et feugiat dolor.</p>
+                    </div>
+                    <div class="col-md-4 ftr-grid2">
+                        <h3>Pages</h3>
+                        <ul>
+                            <li><a href="index.html"><span></span>Home</a></li>
+                            <li><a href="about.html"><span></span>About</a></li>
+                            <li><a href="program.html"><span></span>Programs</a></li>
+                            <li><a href="blog.html"><span></span>Blog</a></li>
+                            <li><a href="gallery.html"><span></span>Gallery</a></li>
+                            <li><a href="contact.html"><span></span>Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 ftr-grid3">
+                        <h3>Quick links</h3>
+                        <ul>
+                            <li><a href="about.html"><span></span>History</a></li>
+                            <li><a href="about.html"><span></span>Departments</a></li>
+                            <li><a href="gallery.html"><span></span>Services</a></li>
+                            <li><a href="blog.html"><span></span>Guidancs</a></li>
+                            <li><a href="about.html"><span></span>Team</a></li>
+                            <li><a href="contact.html"><span></span>Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="clearfix"></div>
+                </div>
+            </div>*@
+    </div>
+    <!---->
+    <div class="copywrite">
+        <div class="container">
+            <p>Bản quyền © 2015 Đại học Thăng Long. All rights reserved | Thiết kế bởi <a href="http://w3layouts.com">W3layouts</a></p>
+        </div>
+    </div>
+    <!---->
+</body>
+</html>
